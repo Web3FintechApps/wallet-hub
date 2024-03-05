@@ -1,9 +1,8 @@
-// Setup: npm install alchemy-sdk
-import { Network } from "alchemy-sdk";
-import { AlchemySupportedChainRepo } from "./BaseRepository";
+import { EvmChain } from "moralis/common-evm-utils";
+import { MoralisSupportedChainRepo } from "./BaseRepository";
 
-export class OptimismRepository extends AlchemySupportedChainRepo {
+export class OptimismRepository extends MoralisSupportedChainRepo {
   constructor(_address: string) {
-    super(_address, Network.OPT_MAINNET);
+    super(_address, EvmChain.OPTIMISM);
   }
 }

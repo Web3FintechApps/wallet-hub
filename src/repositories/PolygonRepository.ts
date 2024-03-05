@@ -1,9 +1,8 @@
-// Setup: npm install alchemy-sdk
-import { Network } from "alchemy-sdk";
-import { AlchemySupportedChainRepo } from "./BaseRepository";
+import { EvmChain } from "moralis/common-evm-utils";
+import { MoralisSupportedChainRepo } from "./BaseRepository";
 
-export class PolygonRepository extends AlchemySupportedChainRepo {
+export class PolygonRepository extends MoralisSupportedChainRepo {
   constructor(_address: string) {
-    super(_address, Network.MATIC_MAINNET);
+    super(_address, EvmChain.POLYGON);
   }
 }

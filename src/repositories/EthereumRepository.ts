@@ -1,9 +1,14 @@
 // Setup: npm install alchemy-sdk
-import { Network } from "alchemy-sdk";
-import { AlchemySupportedChainRepo } from "./BaseRepository";
+import { MoralisSupportedChainRepo } from "./BaseRepository";
+import { EvmChain } from "moralis/common-evm-utils";
 
-export class EthereumRepository extends AlchemySupportedChainRepo {
+export class EthereumRepository extends MoralisSupportedChainRepo {
   constructor(_address: string) {
-    super(_address, Network.ETH_MAINNET);
+    super(_address, EvmChain.ETHEREUM);
   }
 }
+// export class EthereumRepository extends AlchemySupportedChainRepo {
+//   constructor(_address: string) {
+//     super(_address, Network.ETH_MAINNET);
+//   }
+// }
